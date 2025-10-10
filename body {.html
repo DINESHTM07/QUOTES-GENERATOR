@@ -1,0 +1,111 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator {
+  background: rgba(255,255,255,0.95);
+  padding: 28px 22px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+  width: 340px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: box-shadow 0.3s;
+}
+
+.calculator:hover {
+  box-shadow: 0 12px 40px rgba(44,62,80,0.25);
+}
+
+#display {
+  width: 100%;
+  height: 54px;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  text-align: right;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, #f8fafc 0%, #e0eafc 100%);
+  box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+  color: #222;
+  letter-spacing: 2px;
+  outline: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.btn {
+  padding: 18px 0;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.18s;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+  font-weight: 600;
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.number {
+  background: linear-gradient(90deg, #f0f4f8 0%, #d9e7fa 100%);
+  color: #222;
+}
+
+.operator {
+  background: linear-gradient(90deg, #ffd700 0%, #ffe066 100%);
+  color: #7c5c00;
+}
+
+.equal {
+  background: linear-gradient(90deg, #4caf50 0%, #81c784 100%);
+  color: #fff;
+  font-size: 1.35rem;
+  letter-spacing: 1px;
+}
+
+.clear {
+  background: linear-gradient(90deg, #f44336 0%, #ff7961 100%);
+  color: #fff;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .calculator {
+    padding: 14px 4px;
+    border-radius: 14px;
+    width: 98vw;
+    gap: 10px;
+  }
+  #display {
+    height: 44px;
+    font-size: 1.2rem;
+    padding: 6px 8px;
+    border-radius: 8px;
+  }
+  .buttons {
+    gap: 8px;
+  }
+  .btn {
+    padding: 12px 0;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+}
